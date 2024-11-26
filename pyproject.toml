@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "new-comm"
+version = "0.1.0"
+description = "Transform your codebase using natural language prompts"
+readme = "Readme.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "click>=8.0.0",
+    "rich>=10.0.0",
+    "pgvector>=0.1.0",
+    "psycopg2-binary>=2.9.0",
+    "torch>=2.0.0",
+    "transformers>=4.0.0",
+    "python-dotenv>=0.19.0",
+    "pyyaml>=6.0.0"
+]
+
+[project.scripts]
+new-comm = "first_project.cli:cli"
