@@ -13,6 +13,10 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/first_project"]  # or specify the exact package path if different
+
 dependencies = [
     "click>=8.0.0",
     "rich>=10.0.0",
