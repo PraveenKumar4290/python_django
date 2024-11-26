@@ -14,7 +14,7 @@ import os
 # import environ
 # env = environ.Env()
 # environ.Env.read_env()
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 
 
 load_dotenv()

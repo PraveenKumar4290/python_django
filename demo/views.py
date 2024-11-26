@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from rest_framework.response import Response
-from rest_framework.decorators import api_view
-from rest_framework.generics import GenericAPIView
-from rest_framework.mixins import ListModelMixin,RetrieveModelMixin,CreateModelMixin,UpdateModelMixin,DestroyModelMixin 
+from rest_framework.response import Response # type: ignore
+from rest_framework.decorators import api_view # type: ignore
+from rest_framework.generics import GenericAPIView # type: ignore
+from rest_framework.mixins import ListModelMixin,RetrieveModelMixin,CreateModelMixin,UpdateModelMixin,DestroyModelMixin  # type: ignore
 from .models import *
 from .serializer import *
 
