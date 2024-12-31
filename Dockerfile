@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install -y \
 # Install dependencies
 COPY requirements.txt /app/
 RUN pip install --upgrade pip
-RUN pip install .
 RUN pip install --no-cache-dir -r requirements.txt
 # Copy the project files
 COPY . /app/
