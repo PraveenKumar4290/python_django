@@ -4,12 +4,11 @@ py -m venv <env name>
 ```
 
 2. To activate Virtual environment
+
+```bash
 ######      a. for windows
-```bash
 source <env name>/Scripts/activate
-```
 ######      b. for linux/mac
-```bash
 source <env name>/bin/activate
 ```
 
