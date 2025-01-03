@@ -4,6 +4,7 @@ FROM python:3.10
 # Set the working directory
 WORKDIR /app
 
+console.log()
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
