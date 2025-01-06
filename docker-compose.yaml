@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16
+    container_name: python_django_db
+    environment:
+      POSTGRES_DB: python_django
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Im@g!nnoVaTe
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  web:
+    build: .
+      # context: .
+      # dockerfile: Dockerfile
+    container_name: python_django_web
+    command: >
+      sh -c "python first_project/manage.py makemigrations && python first_project/manage.py migrate && python first_project/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_NAME=python_django
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=Im@g!nnoVaTe
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+
+volumes:
+  postgres_data:
